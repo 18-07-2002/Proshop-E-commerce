@@ -1,34 +1,108 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **ProShop eCommerce Platform**  
 
-## Available Scripts
+> A fully functional eCommerce platform developed using the MERN stack (MongoDB, Express.js, React, Node.js) with Redux for state management.
 
-In the project directory, you can run:
+This project was built as part of a comprehensive MERN eCommerce course, focusing on creating a scalable online shopping solution with essential features for both customers and administrators.
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## **Features**  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **Full-featured shopping cart**: Add, remove, and manage products in the cart.
+- **Product reviews and ratings**: Customers can leave feedback and ratings for products.
+- **Top products carousel**: Showcase top-rated or featured products.
+- **Product pagination**: Browse through products with pagination.
+- **Product search feature**: Search and filter products seamlessly.
+- **User profile management**: Track orders and manage personal details.
+- **Admin product management**: CRUD operations for product listings.
+- **Admin user management**: View, edit, or delete user accounts.
+- **Admin order details page**: View detailed order information.
+- **Mark orders as delivered**: Admins can update order statuses.
+- **Checkout process**: Manage shipping, payment options, and order summary.
+- **PayPal/credit card integration**: Secure payment methods.
+- **Database seeder utility**: Pre-load sample products and users for testing.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Setup & Usage**  
 
-### `npm run build`
+### **Environment Variables Configuration**  
+Create a `.env` file in the project root directory and add the following variables:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+NODE_ENV = development  
+PORT = 5000  
+MONGO_URI = your_mongodb_uri  
+JWT_SECRET = 'abc123'  
+PAYPAL_CLIENT_ID = your_paypal_client_id  
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Install Dependencies**  
 
-### `npm run eject`
+Run the following commands to install both frontend and backend dependencies:  
 
+```bash
+# Install backend dependencies
+npm install  
+
+# Navigate to frontend folder and install frontend dependencies
+cd frontend  
+npm install  
+```
+
+---
+
+### **Running the Application**  
+
+```bash
+# Run both frontend (http://localhost:3000) and backend (http://localhost:5000)
+npm run dev  
+
+# Run only the backend server
+npm run server  
+```
+
+---
+
+## **Build & Deploy**  
+
+```bash
+# Create production build for frontend
+cd frontend  
+npm run build  
+```
+
+A Heroku post-build script is included. When pushing to Heroku, the frontend will build automatically, eliminating the need for manual builds.
+
+---
+
+### **Database Seeding**  
+
+Use these commands to import or destroy sample data in the database:  
+
+```bash
+# Import sample products and users  
+npm run data:import  
+
+# Destroy all data from the database  
+npm run data:destroy  
+```
+
+---
+
+### **Sample User Logins**  
+
+| Role     | Email                | Password |  
+|----------|----------------------|----------|  
+| Admin    | admin@example.com    | 123456   |  
+| Customer | john@example.com     | 123456   |  
+| Customer | jane@example.com     | 123456   |  
+
+---
+
+This project serves as a complete eCommerce solution with robust features for end-users, administrators, and seamless third-party integrations.
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
