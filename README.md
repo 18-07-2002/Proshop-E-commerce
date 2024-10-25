@@ -1,5 +1,6 @@
 # **ProShop eCommerce Platform**  
 
+ProShop is a full-featured eCommerce platform built using the MERN stack (MongoDB, Express, React, Node.js) with Redux for state management. It offers a seamless shopping experience, including features like a shopping cart, product reviews, user profiles, and order management. The platform provides admin tools for managing products, users, and orders, along with PayPal/credit card payment integration. With a built-in database seeder for easy setup, this project is designed to be a scalable and robust online store solution.
 > A fully functional eCommerce platform developed using the MERN stack (MongoDB, Express.js, React, Node.js) with Redux for state management.
 
 This project was built as part of a comprehensive MERN eCommerce course, focusing on creating a scalable online shopping solution with essential features for both customers and administrators.
